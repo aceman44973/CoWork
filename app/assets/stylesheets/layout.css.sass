@@ -1,85 +1,115 @@
-
-
 body
-	max-width: 1280px
+	width: 100%
 	height: auto
+%_container
+	max-width: 1024px
 	margin: 0 auto
-	@media screen and (max-width: $pad)
-		padding: 0
-@media screen and (min-width: $desktop)
-	.row
-		max-width: 100%
-	html
-		// background-color: #faf9ff
 header
-	border-bottom: 1px solid $theme
-	margin: 0 auto
-.navbar
-	text-align: center
+	.logo
+		background-image: image-url('TEDxNCHU.svg')
+		background-position: center center
+		height: 68px
+		width: 300px
+		display: block
+		background-size: contain
+		margin: 32px auto
+		background-repeat: no-repeat
+		background-position: center center
+		overflow: hidden
+		h1
+			margin-left: 9999px
+nav
 	background-color: red
-	a
-		+inline-block
-		float: right
-		width: 20%
-		padding: 16px 32px
-		font-size: 18px
+	border-top: 4px solid $theme-dark
+	position: relative
+
+	.navbar
+		font-size: 0
+		text-align: center
+		@extend %_container
+		a
+			+inline-block
+			width: 20%
+			padding: 16px 32px
+			font-size: 16px
+			color: #ffffff
+			&:hover
+				background-color: $theme-dark
+		.active
+			border-bottom: 1px solid $theme-light
+	.fb-share
+		position: absolute
+		background-color: #FFF
+		top: -28px
+		right: 16px
+		width: 48px
+		height: 48px
+		+border-radius(50%)
+		border: 4px solid #fff
+		background-image: image-url('facebook-theme.svg')
+		background-size: 12px
+		background-repeat: no-repeat
+		background-position: center center
+		z-index: $z-top
 		&:hover
-			background-color: $theme-light
-	.active
-		border-bottom: 1px solid $theme-light
+			background-image: image-url('facebook.svg')
+			background-color: $facebook-color
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			background-color: transparent
+			border: 4px solid $theme-dark
+			top: -8px
+			right: -8px
+			width: 56px
+			height: 56px
+			+border-radius(50%)
+			z-index: $z-bottom
 
-
-.logo
-	clear: both
-	width: 120px
-	height: 120px
-	margin: 32px auto 32px auto
-	display: block
-	background-image: image-url('logo.png')
-	background-size: cover
-	background-position: center center
-	overflow: hidden
-	h1
-		margin-left: 9999px
-.company-name
-	text-align: center
-.slogan
-	text-align: center
-	margin: 72px auto
-	// font-size: big-font
-.lang
-	text-align: right
-	margin: 0 8px 12px 0
 .main
-	padding: 20px 0 32px 0
-.article-box
-	padding: 16px 8px
-	margin-bottom: 20px
-	display: block
-	&:hover
-		background-color: $theme-light
-		+transition(0.3s)
-.article-lists
-	padding-left: 8px
-.article-list
-	display: inline
+	@extend %_container
+// .company-name
+// 	text-align: center
+// .slogan
+// 	text-align: center
+// 	margin: 72px auto
+// 	// font-size: big-font
+// .lang
+// 	text-align: right
+// 	margin: 0 8px 12px 0
+// .main
+// 	padding: 20px 0 32px 0
+// .article-box
+// 	padding: 16px 8px
+// 	margin-bottom: 20px
+// 	display: block
+// 	&:hover
+// 		background-color: $theme-light
+// 		+transition(0.3s)
+// .article-lists
+// 	padding-left: 8px
+// .article-list
+// 	display: inline
 
-.slider
-	background-color: $theme
+// .slider
+// 	background-color: $theme
 footer
 	padding-top: 16px
 	padding-bottom: 16px
-	background-color: $theme-light
-	color: $theme
-	input
-		height: 32px
-		width: 100%
-		border: 1px solid $theme
-		+border-radius(3px)
-		padding: 0 12px
-		font-size: 14px
-	.footer-name
-		font-size: 16px
+	border-top: 4px solid $theme
 	p
-		text-align: center
-		font-size: 16px
+		color: $theme
+		font-size: 14px
+		display: block
+	.logo
+		background-image: image-url('TEDxNCHU.svg')
+		background-position: center center
+		height: 32px
+		width: 142px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center center
+		overflow: hidden
+		h1
+			margin-left: 9999px

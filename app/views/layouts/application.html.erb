@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tedxnchu</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>TedxNCHU</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<header>
+	<a href="<%= root_path %>" class="logo"><h1>TEDxNCHU</h1></a>
+</header>
+<nav>
+	<ul class="navbar">
+		<a href="<%= root_path %>"><li>2015年會「璞」</li></a>
+		<a href="<%= about_path %>"><li>關於TEDx</li></a>
+		<a href="<%= team_path %>"><li>策展團隊</li></a>
+		<a href="<%= partner_path %>"><li>贊助廠商</li></a>
+		<a href="<%= contact_path %>"><li>聯絡我們</li></a>
+	</ul>
+	<a href="https://www.facebook.com/tedxnchu?fref=ts" class="fb-share"></a>
+</nav>
+<div class="main">
+	<%= yield %>
+</div>
+<footer>
+	<div class="row">
+		<p class="small-12 medium-8 large-8 columns">This independent TEDx event is operated under license from TED.</p>
+		<div class="small-12 medium-4 large-4 columns">
+			<div class="logo"><h1>TEDxNCHU</h1></div>
+		</div>
+	</div>
+</footer>
 </body>
 </html>

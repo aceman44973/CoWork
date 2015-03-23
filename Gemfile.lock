@@ -53,10 +53,12 @@ GEM
     eventmachine (1.0.7)
     execjs (2.4.0)
     ffi (1.9.6)
+    font-awesome-sass (4.3.1)
+      sass (~> 3.2)
     formatador (0.2.5)
-    foundation-rails (5.5.0.0)
+    foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
-      sass (>= 3.2.0, < 3.4)
+      sass (>= 3.2.0)
     fssm (0.2.10)
     guard (2.12.4)
       formatador (>= 0.2.4)
@@ -174,7 +176,8 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   compass-rails (~> 2.0.0)
-  foundation-rails
+  font-awesome-sass
+  foundation-rails (= 5.4.5)
   guard-livereload
   jbuilder (~> 2.0)
   jquery-rails
