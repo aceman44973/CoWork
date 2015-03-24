@@ -4,10 +4,13 @@ body
 	min-height: 100%
 	height: 100%
 	background-color: $all-background
+section
+	background-color: $all-background-light
 %_container
 	max-width: 1024px
 	margin: 0 auto
 header
+	padding: 32px 0
 	.logo
 		background-image: image-url('TEDxNCHU.svg')
 		background-position: center center
@@ -15,15 +18,16 @@ header
 		width: 300px
 		display: block
 		background-size: contain
-		margin: 32px auto
+		margin: 0 auto
 		background-repeat: no-repeat
 		background-position: center center
 		overflow: hidden
 		h1
 			margin-left: 9999px
 nav
-	background-color: red
+	background-color: $theme
 	border-top: 4px solid $theme-dark
+	border-bottom: 2px solid $theme-dark
 	position: relative
 	.navbar
 		font-size: 0
@@ -33,7 +37,7 @@ nav
 			+inline-block
 			width: 20%
 			padding: 16px 32px
-			font-size: 16px
+			font-size: 18px
 			color: #ffffff
 			&:hover
 				background-color: $theme-dark
