@@ -41,6 +41,7 @@
 	background-image: image-url('rain.jpg')
 	background-position: top center
 	background-attachment: fixed
+	padding-bottom: 96px
 .event-info-inner
 	background: rgba(255,255,255,1)
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%)
@@ -54,8 +55,9 @@
 	.info-box, .schedule-box
 		+border-radius(5px)
 		padding: 20px 0 0 0
+		+box-shadow(0 0 3px rgba(180, 180, 180, 0.5))
 		h3
-			border-bottom: 1px solid
+			border-bottom: 1px solid $helper-dark
 			padding-bottom: 8px
 			font-size: 22px
 			width: 96%
@@ -98,10 +100,16 @@
 	background-image: image-url('body-pattern.png')
 	// +box-shadow(0 -5px 5px 0 rgba(0, 0, 0, 0.1) inset)
 	h3
-		line-height: 40px
-		font-size: 24px
+		line-height: 120px
+		font-size: 28px
 		padding: 40px 0
 		text-align: center
+	.speaker-box
+		&:hover
+			.speaker-thumbnail
+				+transform(scale(1.02))
+				+box-shadow(0 0 3px rgba(120, 120, 120, 0.5))
+				+transition(0.2s)
 	.row
 		// margin-bottom: 32px
 	.speaker-thumbnail
@@ -138,6 +146,7 @@
 		position: absolute
 .go-now
 	// background-color: #ededed
+	padding: 80px 0
 	h2, a
 		text-align: center
 		display: block
