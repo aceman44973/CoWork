@@ -24,7 +24,16 @@
 		z-index: $z-top
 		border-bottom: 10px solid $theme
 		transition: all 500ms ease 0s
-		&:before , &:after
+		&:before
+			width: 45px
+			position: relative
+			left: -6px
+			height: 10px
+			background: $theme
+			content: ''
+			display: block
+			transition: all 500ms ease 0s
+		&:after
 			width: 45px
 			position: relative
 			left: -6px
