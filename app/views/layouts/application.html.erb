@@ -28,13 +28,13 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
-<body>
+<body id="main">
 <header>
-	<a href="<%= root_path %>" class="logo"><h1>TEDxNCHU</h1></a>
+	<a href="<%= home_path %>" class="logo"><h1>TEDxNCHU</h1></a>
 </header>
 <nav>
 	<ul class="navbar">
-		<a href="<%= root_path %>"><li>2015年會「璞」</li></a>
+		<a href="<%= home_path %>"><li>2015年會「璞」</li></a>
 		<a href="<%= about_path %>"><li>關於TEDx</li></a>
 		<a href="<%= team_path %>"><li>策展團隊</li></a>
 		<a href="<%= partner_path %>"><li>贊助廠商</li></a>
@@ -51,5 +51,49 @@
 		</div>
 	</div>
 </footer>
+<a href="#cd-nav" class="cd-nav-trigger">Menu 
+	<span class="cd-nav-icon"></span>
+
+	<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+		<circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+	</svg>
+</a>
+
+<div id="cd-nav" class="cd-nav">
+	<div class="cd-navigation-wrapper">
+		<div class="cd-half-block">
+			<h2>Navigation</h2>
+
+			<nav>
+				<ul class="cd-primary-nav">
+					<li><a href="#0" class="selected">The team</a></li>
+					<li><a href="#0">Our services</a></li>
+					<li><a href="#0">Our projects</a></li>
+					<li><a href="#0">Start a project</a></li>
+					<li><a href="#0">Contact us</a></li>
+				</ul>
+			</nav>
+		</div><!-- .cd-half-block -->
+		
+		<div class="cd-half-block">
+			<address>
+				<ul class="cd-contact-info">
+					<li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
+					<li>0244-12345678</li>
+					<li>
+						<span>MyStreetName 24</span>
+						<span>W1234X</span>
+						<span>London, UK</span>
+					</li>
+				</ul>
+			</address>
+		</div> <!-- .cd-half-block -->
+	</div> <!-- .cd-navigation-wrapper -->
+</div> <!-- .cd-nav -->
 </body>
+<script> 
+$(function() {
+  $('nav a[href^="/' + location.pathname.split("")[1] + '"]').addClass('active');
+});
+</script>
 </html>

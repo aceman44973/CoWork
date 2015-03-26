@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'main#index'
+  get 'home' => 'main#index'
   get 'about' => 'main#about'
   get 'team' => 'main#team'
   get 'partner' => 'main#partner'
