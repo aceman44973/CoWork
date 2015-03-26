@@ -97,3 +97,8 @@
 	</ul>
 </div>
 <div class="hero"></div>
+<script> 
+$(function() {
+  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+});
+</script>
