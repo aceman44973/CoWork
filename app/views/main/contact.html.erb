@@ -1,166 +1,20 @@
 <div class="contact">
-	<div id="map">
-	</div>
-	<h2>聯絡我們</h2>
 	<div class="row">
 		<div class="small-10 medium-8 large-6 small-centered columns">
-			<div>
-				email：<a href="mailto:tough@fontech.com.tw">tough@fontech.com.tw</a>
-				電話：<a href="tel:0911662343">0911662343</a>
-				地址：<a href="">台北市和平東路oo號</a>
-				<a href="" rel="open">連言給我們</a>
+			<div class="contact-box">
+			<h2>聯絡我們</h2>
+				<p>email：<a href="mailto:tough@fontech.com.tw">tough@fontech.com.tw</a></p>
+				<p>電話：<a href="tel:0911662343">0911662343</a></p>
+				<p>地址：<a href="">台北市和平東路oo號</a></p>
+				<a href="" rel="open" class="contact-btn">連言給我們</a>
 			</div>
 		</div>
 	</div>
 </div>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-    
-    <script type="text/javascript">
-        google.maps.event.addDomListener(window, 'load', init);
-    
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 15,
 
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(24.120, 120.689), // New York
-
-                // How you would like to style the map. 
-                // This is where you would paste any style found on Snazzy Maps.
-                styles: 
-				                [
-				    {
-				        "featureType": "all",
-				        "elementType": "geometry",
-				        "stylers": [
-				            {
-				                "visibility": "simplified"
-				            },
-				            {
-				                "hue": "#ff0000"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "administrative",
-				        "elementType": "all",
-				        "stylers": [
-				            {
-				                "visibility": "simplified"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "poi",
-				        "elementType": "all",
-				        "stylers": [
-				            {
-				                "visibility": "off"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "poi.school",
-				        "elementType": "geometry.fill",
-				        "stylers": [
-				            {
-				                "visibility": "on"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "poi.school",
-				        "elementType": "labels",
-				        "stylers": [
-				            {
-				                "visibility": "on"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "poi.school",
-				        "elementType": "labels.text.fill",
-				        "stylers": [
-				            {
-				                "visibility": "on"
-				            },
-				            {
-				                "hue": "#ff0000"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "poi.school",
-				        "elementType": "labels.text.stroke",
-				        "stylers": [
-				            {
-				                "visibility": "on"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "road",
-				        "elementType": "labels.icon",
-				        "stylers": [
-				            {
-				                "visibility": "off"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "transit.station",
-				        "elementType": "labels.icon",
-				        "stylers": [
-				            {
-				                "visibility": "off"
-				            }
-				        ]
-				    },
-				    {
-				        "featureType": "water",
-				        "elementType": "all",
-				        "stylers": [
-				            {
-				                "visibility": "off"
-				            }
-				        ]
-				    }
-				]
-
-            };
-            var mapElement = document.getElementById('map');
-            var map = new google.maps.Map(mapElement, mapOptions);
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(24.1184, 120.679222),
-                map: map,
-                title: 'Snazzy!'
-            });
-        }
-    </script>
-<script> 
+<script>
 $(function() {
   $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+
 });
-
-
-
-jQuery(document).ready(function($){    
-    try{
-        var style = JSON.parse(SnazzyDataForSnazzyMaps['json']);
-        (function(g, s) {        
-            var _map = g.Map;
-            g.Map = function(map, options) {
-                var that = Object.create(_map.prototype);
-                options.styles = s;
-                _map.apply(that, arguments);
-                return that;
-            };
-        })(google.maps, style);
-    }catch(error){/*Quietly die and leave the maps unstyled*/}
-});
-
-
 </script>
