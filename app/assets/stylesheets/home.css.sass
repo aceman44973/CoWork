@@ -6,7 +6,7 @@
 	.slider-info
 		height: 100%
 		min-height: 100%
-		padding-bottom: 40%
+		padding-bottom: 38%
 		background: -moz-radial-gradient(rgba(0,0,0, 0.1) 15%, transparent 16%),-moz-radial-gradient(rgba(0,0,0, 0.1) 15%, transparent 16%), rgba(0,0,0,0.1)
 		background: -webkit-radial-gradient(rgba(0,0,0, 0.1) 15%, transparent 16%), -webkit-radial-gradient(rgba(0,0,0, 0.1) 15%, transparent 16%), rgba(0,0,0,0.1)
 		background-position: 0 0, 40px 40px
@@ -20,9 +20,14 @@
 	padding-top: 56px
 	h1
 		font-size: 48px
+		line-height: 40px
 	h2
 		font-size: 28px
-		margin: 8px auto
+		margin: 0 auto
+	h3
+		line-height: 18px
+		margin-bottom: 32px
+
 	p
 		font-size: 20px
 	a
@@ -40,6 +45,7 @@
 .event-info-outter
 	background-image: image-url('rain.jpg')
 	background-position: top center
+	background-size: cover
 	background-attachment: fixed
 	padding-bottom: 96px
 .event-info-inner
@@ -51,6 +57,8 @@
 	background: -ms-linear-gradient(top, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%)
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )
+	padding: 0 8px
+
 	.row
 	.info-box, .schedule-box
 		+border-radius(5px)
@@ -102,7 +110,7 @@
 	h3
 		line-height: 120px
 		font-size: 28px
-		padding: 40px 0
+		padding: 40px 0 0 0
 		text-align: center
 	.speaker-box
 		&:hover
@@ -111,7 +119,20 @@
 				+box-shadow(0 0 3px rgba(120, 120, 120, 0.5))
 				+transition(0.2s)
 	.row
-		// margin-bottom: 32px
+		h2
+			margin-bottom: 32px
+			font-size: 22px
+			color: $theme-dark
+			display: inline-block
+			text-align: center
+			line-height: 32px
+			&:after
+				display: block
+				content: ''
+				border-bottom: 2px solid
+				display: block
+				width: 56px
+				margin: 0 auto
 	.speaker-thumbnail
 		padding-bottom: 100%
 		background-color: $all-background
