@@ -28,4 +28,31 @@
 			width: 60%
 			font-size: 18px
 			margin: 32px auto 0 auto
+			color: $theme
 			+border-radius(5px)
+			&:hover
+				background-color: $theme
+				color: white
+		.ss-q-title
+			display: block
+			padding-left: 16px
+			margin-top: 16px
+		input, textarea
+			display: block
+			border: 1px solid rgba($theme, 0.7)
+			background-color: #FFF
+			padding: 8px
+			width: 60%
+			font-size: 18px
+			margin: 2px 16px 0 16px
+			color: $theme
+			+border-radius(0px)
+			outline: none
+			+transition(0.3s)
+			&:focus
+				border: 1px solid $theme
+				+border-radius(5px)
+				+box-shadow(0 1px 3px rgba(20, 20, 20, 0.2))
+
+		textarea
+			width: calc(100% - 32px)

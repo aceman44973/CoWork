@@ -5,18 +5,73 @@
 			<h2>聯絡我們</h2>
 				<p>email：<a href="mailto:tedxnchu@gmail.com">tedxnchu@gmail.com</a></p>
 				<p>地址：<a href="https://www.google.com.tw/maps/place/402%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8D%97%E5%8D%80%E5%9C%8B%E5%85%89%E8%B7%AF250%E8%99%9F%E5%9C%8B%E7%AB%8B%E4%B8%AD%E8%88%88%E5%A4%A7%E5%AD%B8/@24.121556,120.679,17z/data=!3m1!4b1!4m2!3m1!1s0x34693d1d68110173:0x228207f25b7d86cd">台中市南區國光路250號</a></p>
-				<!-- <a href="" rel="open" class="contact-btn">連言給我們</a> -->
+				<p>交通方式：<br>
+					◎自行開車：<br>
+					中港交流道→中興大學<br>
+					國道一號的中港交流道下來，接往台中市區的台灣大道，至忠明南路右轉，在興大路口左轉，約3分鐘即可抵達正門。<br><br>
+					◎搭乘火車:
+					台中站→中興大學<br>
+					於台中客運(台鐵台中站對面)，搭33、35號公車，往僑光科技大學(中興大學站下車)。<br>
+					統聯客運(台中國光客運站對面)，搭73號公車，往莒光新城(中興大學站下車)。
+					</p>
+					<a id="slide-out" class="contact-btn">聯絡我們</a>
+
+					<div class="ss-form form-pop" style="display: none;"><form action="https://docs.google.com/a/fontech.com.tw/forms/d/19doIvWW6tay_cD7pvaxyFkrNreZWMWDN8eBXVvqhTDc/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+					<div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_1149828392"><div class="ss-q-title">姓名
+					<label for="itemView.getDomIdToLabel()" aria-label="(必填欄位)"></label>
+					<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
+					<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+					<input type="text" name="entry.1149828392" value="" class="ss-q-short" id="entry_1149828392" dir="auto" aria-label="姓名  " aria-required="true" required="" title="">
+					<div class="error-message" id="1715244958_errorMessage"></div>
+
+					</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_375965961"><div class="ss-q-title">信箱
+					<label for="itemView.getDomIdToLabel()" aria-label="(必填欄位)"></label>
+					<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
+					<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+					<input type="text" name="entry.375965961" value="" class="ss-q-short" id="entry_375965961" dir="auto" aria-label="信箱  " aria-required="true" required="" title="">
+					<div class="error-message" id="1139849404_errorMessage"></div>
+
+					</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_47065324"><div class="ss-q-title">聯絡方式
+					</div>
+					<input type="text" name="entry.47065324" value="" class="ss-q-short" id="entry_47065324" dir="auto" aria-label="聯絡方式 手機（可填可不填） " title="">
+					<div class="error-message" id="1985854013_errorMessage"></div>
+
+					</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+					<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_1640754436"><div class="ss-q-title">內文
+					</div>
+					<textarea name="entry.1640754436" rows="8" cols="0" class="ss-q-long" id="entry_1640754436" dir="auto" aria-label="內文 有什麼我們可以幫忙的地方嗎？ " placeholder="有什麼我們可以幫忙的地方嗎？"></textarea>
+					<div class="error-message" id="1709983035_errorMessage"></div>
+
+					</div></div></div>
+					<input type="hidden" name="draftResponse" value="[,,&quot;-2099834504268738200&quot;]
+					">
+					<input type="hidden" name="pageHistory" value="0">
+
+
+					<input type="hidden" name="fbzx" value="-2099834504268738200">
+					<input type="submit" name="submit" value="送出" id="ss-submit" class="contact-btn">
+					</ol></form></div>
 			</div>
 		</div>
 	</div>
 </div>
-<iframe width="960" height="310" src="https://livehouse.in/embed/channel/199707" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="960" height="310" src="https://livehouse.in/embed/channel/199707" frameborder="0" allowfullscreen></iframe> -->
 <script>
 $(function() {
   $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
-	$('.contact').css("height", function(){ 
-	return $('body').height() - 142;
-	});
-
+	// $('.contact').css("height", function(){ 
+	// return $('body').height() - 142;
+	// });
+  $('#slide-out').click(function() {
+  	$(this).hide()
+	$('.form-pop').show();
+   });
 });
 </script>
